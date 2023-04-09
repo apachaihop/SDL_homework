@@ -40,14 +40,14 @@ jobs:
         cd ${{ github.workspace }}
         cd SDL_dynamic
         cd build
-        cmake --build
+        cmake --build .
       
     - name: Build Static
       run: |
         cd ${{ github.workspace }}
         cd SDL_static
         cd build
-        cmake --build
+        cmake --build .
         
     - name: Test Run
       run: |
