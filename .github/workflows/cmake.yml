@@ -11,7 +11,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    
+    - name: SDL3
+      run: |
+        git clone https://github.com/libsdl-org/SDL.git
+        cd SDL
+        mkdir build
+        cd build
+        cmake ..
+        make
+        cmake --install
     - name: Configure CMake Dynamic
       run: |
         cd ${{ github.workspace }}
