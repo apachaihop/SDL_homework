@@ -1,4 +1,4 @@
-name: CMake
+name: build
 
 on:
   push:
@@ -50,4 +50,8 @@ jobs:
         cd SDL_static
         cd build
         make
+    - name: run with static linking
+      run: /home/runner/work/SDL_homework/SDL_homework/SDL_static/build/SDL_static
+    - name: run with shared linking
+      run: /home/runner/work/SDL_homework/SDL_homework/SDL_dynamic/build/SDL_dynamic
 
