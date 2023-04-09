@@ -13,8 +13,8 @@ add_executable(SDL_test main.cpp)
 
 find_package(SDL3 REQUIRED)
 
-target_link_libraries(SDL_static PRIVATE SDL3::SDL3-static)
-set_property(TARGET SDL_static PROPERTY POSITION_INDEPENDENT_CODE
+target_link_libraries(SDL_test PRIVATE SDL3::SDL3-static)
+set_property(TARGET SDL_test PROPERTY POSITION_INDEPENDENT_CODE
                                                    TRUE)
                                         
 enable_testing()
