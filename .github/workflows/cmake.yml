@@ -18,7 +18,7 @@ jobs:
         cd SDL
         mkdir build
         cd build
-        cmake ..
+        cmake -DSDL_STATIC=ON ..
         make
         sudo cmake --install .
     - name: Configure CMake Dynamic
