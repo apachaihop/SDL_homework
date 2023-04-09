@@ -20,7 +20,7 @@ jobs:
         cd build
         cmake ..
         make
-        cmake --install .
+        sudo cmake --install .
     - name: Configure CMake Dynamic
       run: |
         cd ${{ github.workspace }}
